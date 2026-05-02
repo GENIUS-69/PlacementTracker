@@ -30,3 +30,9 @@ server/.env
 # Frontend Specific
 client/node_modules/
 client/dist/
+
+# Documentation & Assets (Personal)
+*.txt
+*.jpeg
+*.jpg
+*.png
