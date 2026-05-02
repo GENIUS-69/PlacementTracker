@@ -1,0 +1,398 @@
+{
+  "name": "DSA",
+  "version": "1.0",
+  "topics": [
+    {
+      "topicId": "foundations",
+      "title": "Foundations",
+      "subtopics": [
+        {
+          "title": "Mathematics Basics",
+          "children": [
+            "Logarithms",
+            "Modular Arithmetic",
+            "Combinatorics",
+            "Probability Basics"
+          ]
+        },
+        {
+          "title": "Recursion Fundamentals",
+          "children": [
+            "Base Case",
+            "Stack Behavior",
+            "Tail Recursion",
+            "Recursive Tree"
+          ]
+        },
+        {
+          "title": "Complexity Analysis",
+          "children": [
+            "Time Complexity",
+            "Space Complexity",
+            "Amortized Analysis"
+          ]
+        },
+        {
+          "title": "Asymptotic Notations",
+          "children": [
+            "Big-O",
+            "Big-Ω",
+            "Big-Θ"
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "basic-data-structures",
+      "title": "Basic Data Structures",
+      "subtopics": [
+        {
+          "title": "Arrays",
+          "children": [
+            "Static Array",
+            "Dynamic Array",
+            "Prefix Sum",
+            "Kadane’s Algorithm"
+          ]
+        },
+        {
+          "title": "Strings",
+          "children": [
+            "String Matching",
+            "Pattern Searching",
+            "KMP Algorithm",
+            "Rabin-Karp"
+          ]
+        },
+        {
+          "title": "Linked List",
+          "children": [
+            "Singly",
+            "Doubly",
+            "Cycle Detection",
+            "Fast & Slow Pointers"
+          ]
+        },
+        {
+          "title": "Stack",
+          "children": [
+            "Monotonic Stack",
+            "Infix/Postfix",
+            "Next Greater Element"
+          ]
+        },
+        {
+          "title": "Queue",
+          "children": [
+            "Deque",
+            "Circular Queue",
+            "Priority Queue"
+          ]
+        },
+        {
+          "title": "Hashing",
+          "children": [
+            "HashMap",
+            "HashSet",
+            "Collision Handling"
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "searching-sorting",
+      "title": "Searching & Sorting",
+      "subtopics": [
+        {
+          "title": "Searching",
+          "children": [
+            "Linear Search",
+            "Binary Search",
+            "Binary Search on Answer"
+          ]
+        },
+        {
+          "title": "Sorting",
+          "children": [
+            "Bubble Sort",
+            "Selection Sort",
+            "Insertion Sort",
+            "Merge Sort",
+            "Quick Sort",
+            "Heap Sort",
+            "Counting Sort",
+            "Radix Sort",
+            "Bucket Sort"
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "trees",
+      "title": "Trees",
+      "subtopics": [
+        {
+          "title": "Binary Tree",
+          "children": [
+            "Traversal (Inorder, Preorder, Postorder)",
+            "Level Order"
+          ]
+        },
+        {
+          "title": "Binary Search Tree",
+          "children": [
+            "Insert/Delete/Search",
+            "Balanced BST"
+          ]
+        },
+        {
+          "title": "Heap",
+          "children": [
+            "Min Heap",
+            "Max Heap",
+            "Heap Operations"
+          ]
+        },
+        {
+          "title": "Balanced Trees",
+          "children": [
+            "AVL Tree",
+            "Red-Black Tree"
+          ]
+        },
+        {
+          "title": "Advanced Trees",
+          "children": [
+            "Segment Tree",
+            "Fenwick Tree",
+            "Trie"
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "graphs",
+      "title": "Graphs",
+      "subtopics": [
+        {
+          "title": "Graph Representation",
+          "children": [
+            "Adjacency Matrix",
+            "Adjacency List"
+          ]
+        },
+        {
+          "title": "Traversal",
+          "children": [
+            "BFS",
+            "DFS"
+          ]
+        },
+        {
+          "title": "Shortest Path",
+          "children": [
+            "Dijkstra",
+            "Bellman-Ford",
+            "Floyd-Warshall"
+          ]
+        },
+        {
+          "title": "Minimum Spanning Tree",
+          "children": [
+            "Prim’s",
+            "Kruskal’s"
+          ]
+        },
+        {
+          "title": "Advanced Graphs",
+          "children": [
+            "Topological Sort",
+            "Kosaraju SCC",
+            "Tarjan’s Algorithm"
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "advanced-data-structures",
+      "title": "Advanced Data Structures",
+      "subtopics": [
+        {
+          "title": "Disjoint Set (Union-Find)",
+          "children": [
+            "Path Compression",
+            "Union by Rank"
+          ]
+        },
+        {
+          "title": "Suffix Structures",
+          "children": [
+            "Suffix Array",
+            "Suffix Tree"
+          ]
+        },
+        {
+          "title": "Skip List"
+        },
+        {
+          "title": "B-Trees / B+ Trees"
+        }
+      ]
+    },
+    {
+      "topicId": "algorithm-design-techniques",
+      "title": "Algorithm Design Techniques",
+      "subtopics": [
+        {
+          "title": "Brute Force",
+          "children": [
+            "Exhaustive Search",
+            "Permutation Generation",
+            "Subset Enumeration"
+          ]
+        },
+        {
+          "title": "Greedy",
+          "children": [
+            "Activity Selection",
+            "Huffman Coding",
+            "Fractional Knapsack",
+            "Job Scheduling"
+          ]
+        },
+        {
+          "title": "Divide and Conquer",
+          "children": [
+            "Merge Sort",
+            "Quick Sort",
+            "Binary Search",
+            "Closest Pair"
+          ]
+        },
+        {
+          "title": "Dynamic Programming",
+          "children": [
+            "0/1 Knapsack",
+            "Unbounded Knapsack",
+            "LCS",
+            "LIS",
+            "Matrix Chain Multiplication",
+            "Coin Change",
+            "Edit Distance",
+            "DP on Trees",
+            "DP on Grids",
+            "Bitmask DP"
+          ]
+        },
+        {
+          "title": "Backtracking",
+          "children": [
+            "N-Queens",
+            "Sudoku",
+            "Permutations",
+            "Combinations"
+          ]
+        },
+        {
+          "title": "Branch and Bound",
+          "children": [
+            "TSP",
+            "Knapsack Optimization"
+          ]
+        },
+        {
+          "title": "Randomized Algorithms",
+          "children": [
+            "Randomized QuickSort",
+            "QuickSelect",
+            "Reservoir Sampling"
+          ]
+        },
+        {
+          "title": "Two Pointer",
+          "children": [
+            "Pair Sum",
+            "3Sum",
+            "Container With Most Water"
+          ]
+        },
+        {
+          "title": "Sliding Window",
+          "children": [
+            "Fixed Window",
+            "Variable Window",
+            "Max Subarray Problems"
+          ]
+        },
+        {
+          "title": "Bit Manipulation",
+          "children": [
+            "Bitmasking",
+            "XOR Tricks",
+            "Subsets via Bits"
+          ]
+        }
+      ]
+    },
+    {
+      "topicId": "problem-patterns",
+      "title": "Problem Solving Patterns",
+      "subtopics": [
+        {
+          "title": "Prefix Sum"
+        },
+        {
+          "title": "Two Heaps"
+        },
+        {
+          "title": "Merge Intervals"
+        },
+        {
+          "title": "K-th Element Problems"
+        },
+        {
+          "title": "Cycle Detection"
+        },
+        {
+          "title": "Island Problems"
+        }
+      ]
+    },
+    {
+      "topicId": "system-level-dsa",
+      "title": "DSA for System Design",
+      "subtopics": [
+        {
+          "title": "Caching (LRU, LFU)"
+        },
+        {
+          "title": "Consistent Hashing"
+        },
+        {
+          "title": "Bloom Filters"
+        },
+        {
+          "title": "Rate Limiting Algorithms"
+        }
+      ]
+    },
+    {
+      "topicId": "practice",
+      "title": "Practice & Competitive Programming",
+      "subtopics": [
+        {
+          "title": "LeetCode"
+        },
+        {
+          "title": "Codeforces"
+        },
+        {
+          "title": "AtCoder"
+        },
+        {
+          "title": "GeeksforGeeks"
+        }
+      ]
+    }
+  ]
+}

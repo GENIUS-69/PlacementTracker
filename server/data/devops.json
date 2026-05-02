@@ -1,0 +1,238 @@
+{
+  "name": "DevOps",
+  "topics": [
+    {
+      "topicId": "programming-language",
+      "title": "Learn a Programming Language",
+      "subtopics": [
+        { "title": "Python" },
+        { "title": "Go" },
+        { "title": "JavaScript / Node.js" },
+        { "title": "Ruby (optional)" },
+        { "title": "Rust (optional)" }
+      ]
+    },
+    {
+      "topicId": "operating-system",
+      "title": "Operating System",
+      "subtopics": [
+        { "title": "Linux Basics" },
+        { "title": "Unix" },
+        { "title": "Linux Distribution (Ubuntu, SUSE, Debian, RHEL)" },
+        { "title": "Windows (optional)" },
+        { "title": "MacOS (optional)" }
+      ]
+    },
+    {
+      "topicId": "scripting",
+      "title": "Scripting",
+      "subtopics": [
+        { "title": "Bash" },
+        { "title": "PowerShell (optional)" }
+      ]
+    },
+    {
+      "topicId": "terminal",
+      "title": "Terminal Knowledge",
+      "subtopics": [
+        { "title": "Vim" },
+        { "title": "Nano" },
+        { "title": "Emacs (optional)" }
+      ]
+    },
+    {
+      "topicId": "version-control",
+      "title": "Version Control Systems",
+      "subtopics": [
+        { "title": "Git" }
+      ]
+    },
+    {
+      "topicId": "vcs-hosting",
+      "title": "VCS Hosting",
+      "subtopics": [
+        { "title": "GitHub" },
+        { "title": "GitLab" },
+        { "title": "Bitbucket (optional)" }
+      ]
+    },
+    {
+      "topicId": "networking",
+      "title": "Networking & Protocols",
+      "subtopics": [
+        { "title": "HTTP / HTTPS" },
+        { "title": "FTP / SFTP" },
+        { "title": "DNS" },
+        { "title": "SSL / TLS" },
+        { "title": "SSH" },
+        { "title": "OSI Model" },
+        { "title": "Email Protocols (SMTP, IMAP, POP3)" },
+        { "title": "Domain Name System" }
+      ]
+    },
+    {
+      "topicId": "web-servers",
+      "title": "Web Servers",
+      "subtopics": [
+        { "title": "Nginx" },
+        { "title": "Apache" },
+        { "title": "Caddy (optional)" },
+        { "title": "Tomcat (optional)" }
+      ]
+    },
+    {
+      "topicId": "load-balancing",
+      "title": "Load Balancing & Proxy",
+      "subtopics": [
+        { "title": "Forward Proxy" },
+        { "title": "Reverse Proxy" },
+        { "title": "Load Balancer" },
+        { "title": "Caching Server" }
+      ]
+    },
+    {
+      "topicId": "containers",
+      "title": "Containers",
+      "subtopics": [
+        { "title": "Docker" },
+        { "title": "LXC (optional)" }
+      ]
+    },
+    {
+      "topicId": "container-usecase",
+      "title": "What and how to setup?",
+      "subtopics": [
+        { "title": "Containerization Basics" },
+        { "title": "Image Management" },
+        { "title": "Networking in Containers" }
+      ]
+    },
+    {
+      "topicId": "cloud-providers",
+      "title": "Cloud Providers",
+      "subtopics": [
+        { "title": "AWS" },
+        { "title": "Azure" },
+        { "title": "Google Cloud" },
+        { "title": "DigitalOcean (optional)" },
+        { "title": "Heroku (optional)" }
+      ]
+    },
+    {
+      "topicId": "serverless",
+      "title": "Serverless",
+      "subtopics": [
+        { "title": "AWS Lambda" },
+        { "title": "Azure Functions" },
+        { "title": "Cloudflare Workers (optional)" },
+        { "title": "Vercel (optional)" },
+        { "title": "Netlify (optional)" }
+      ]
+    },
+    {
+      "topicId": "configuration-management",
+      "title": "Configuration Management",
+      "subtopics": [
+        { "title": "Ansible" },
+        { "title": "Chef (optional)" },
+        { "title": "Puppet (optional)" }
+      ]
+    },
+    {
+      "topicId": "provisioning",
+      "title": "Provisioning",
+      "subtopics": [
+        { "title": "Terraform" },
+        { "title": "AWS CDK (optional)" },
+        { "title": "Pulumi (optional)" },
+        { "title": "CloudFormation (optional)" }
+      ]
+    },
+    {
+      "topicId": "ci-cd",
+      "title": "CI/CD Tools",
+      "subtopics": [
+        { "title": "Jenkins" },
+        { "title": "GitHub Actions" },
+        { "title": "GitLab CI" },
+        { "title": "CircleCI (optional)" },
+        { "title": "TeamCity (optional)" }
+      ]
+    },
+    {
+      "topicId": "monitoring",
+      "title": "Infrastructure Monitoring",
+      "subtopics": [
+        { "title": "Prometheus" },
+        { "title": "Grafana" },
+        { "title": "Zabbix (optional)" },
+        { "title": "Datadog (optional)" }
+      ]
+    },
+    {
+      "topicId": "logging",
+      "title": "Log Management",
+      "subtopics": [
+        { "title": "ELK Stack" },
+        { "title": "Splunk (optional)" },
+        { "title": "Graylog (optional)" }
+      ]
+    },
+    {
+      "topicId": "secret-management",
+      "title": "Secret Management",
+      "subtopics": [
+        { "title": "Vault" },
+        { "title": "AWS Secrets Manager (optional)" },
+        { "title": "GCP Secret Manager (optional)" }
+      ]
+    },
+    {
+      "topicId": "container-orchestration",
+      "title": "Container Orchestration",
+      "subtopics": [
+        { "title": "Kubernetes" },
+        { "title": "Docker Swarm (optional)" },
+        { "title": "AWS ECS (optional)" }
+      ]
+    },
+    {
+      "topicId": "observability",
+      "title": "Observability",
+      "subtopics": [
+        { "title": "Metrics" },
+        { "title": "Logging" },
+        { "title": "Tracing" },
+        { "title": "OpenTelemetry (optional)" }
+      ]
+    },
+    {
+      "topicId": "gitops",
+      "title": "GitOps",
+      "subtopics": [
+        { "title": "ArgoCD" },
+        { "title": "FluxCD (optional)" }
+      ]
+    },
+    {
+      "topicId": "service-mesh",
+      "title": "Service Mesh",
+      "subtopics": [
+        { "title": "Istio" },
+        { "title": "Consul (optional)" },
+        { "title": "Linkerd (optional)" },
+        { "title": "Envoy (optional)" }
+      ]
+    },
+    {
+      "topicId": "cloud-design",
+      "title": "Cloud Design Patterns",
+      "subtopics": [
+        { "title": "Availability" },
+        { "title": "Data Management" },
+        { "title": "Design & Implementation" },
+        { "title": "Monitoring & Management" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+🧠 Tech Stack: Placement Prep Tracker
+1. 🏗️ Architecture Style
+✅ Monolith (for now)
+One backend (Node + Express)
+One frontend (React)
+
+👉 Why:
+
+Faster to build
+Easier to debug
+Enough for single-user localhost
+2. 🎨 Frontend Stack
+⚛️ Core
+React (with Hooks)
+Vite (faster than CRA)
+🎨 Styling
+Tailwind CSS
+
+👉 Why:
+
+Rapid UI (you’ll build dashboard fast)
+Clean + modern look (important for resume)
+📊 Visualization
+Recharts
+
+Used for:
+
+Pie chart (progress)
+Bar chart (weekly activity)
+Line chart (test improvement)
+🧠 State Management
+Zustand
+
+👉 Why not Redux?
+
+Overkill for single-user
+Zustand is cleaner, faster
+⏱️ Timer + Countdown
+Native JS (setInterval)
+Optional: date-fns
+🌐 API Communication
+Axios
+3. 🧩 Backend Stack
+🚀 Core
+Node.js
+Express.js
+🗄️ Database
+MongoDB
+Mongoose
+🔄 Dev Utilities
+Nodemon
+🧪 Validation (Optional but strong)
+Joi
+
+👉 Adds professionalism to backend
+
+4. 📊 Analytics & Logic Layer
+
+(Not separate service—built inside backend)
+
+Handles:
+
+Progress %
+Weak topic detection
+Study trends
+5. 🧠 Data Layer Strategy
+Roadmap Storage
+JSON → seeded into MongoDB
+Collections
+roadmaps
+progress_logs
+study_sessions
+tests
+Why MongoDB?
+Flexible schema (roadmap is hierarchical)
+Easy to seed full dataset
+6. ⚙️ DevOps-Oriented Stack (Important for YOU)
+🐳 Containerization
+Docker
+
+👉 You MUST include this:
+
+Shows real DevOps skill
+Easy local setup
+🔁 CI/CD (Optional Upgrade)
+GitHub Actions
+☁️ Cloud (Future)
+AWS
+EC2 (backend)
+S3 (assets)
+7. 🧪 Testing Stack (Optional but HIGH IMPACT)
+Backend
+Jest
+API Testing
+Postman
+8. 📁 Project Structure
+Frontend
+client/
+ ├── components/
+ ├── pages/
+ ├── store/ (Zustand)
+ ├── services/ (API calls)
+ ├── utils/
+Backend
+server/
+ ├── controllers/
+ ├── routes/
+ ├── models/
+ ├── services/
+ ├── config/
+ ├── data/ (roadmap JSON)
+9. 🔌 Integration Flow
+React UI
+   ↓ Axios
+Express API
+   ↓
+MongoDB
+10. ⚖️ Tradeoffs (Why this stack is correct)
+Why NOT Next.js?
+You don’t need SSR
+Adds complexity
+Why NOT Redux?
+Overkill
+Why NOT SQL?
+Your roadmap is hierarchical → MongoDB wins
+Why NOT Microservices?
+Single-user app → unnecessary complexity
+11. 🔥 Resume Impact (This matters most)
+
+If you build this stack properly, you can claim:
+
+Full-stack MERN project ✔
+Data visualization dashboard ✔
+DevOps integration (Docker + CI/CD) ✔
+Analytics system ✔
+
+👉 That’s already stronger than 90% of freshers.
+
+12. 🧠 Smart Add-ons (Optional but Powerful)
+Dark mode (UI polish)
+Keyboard shortcuts (fast tracking)
+Offline caching (localStorage sync)

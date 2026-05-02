@@ -1,0 +1,350 @@
+{
+  "name": "System Design",
+  "topics": [
+    {
+      "topicId": "fundamentals",
+      "title": "Fundamentals",
+      "subtopics": [
+        {
+          "title": "CAP Theorem"
+        },
+        {
+          "title": "Consistency Models (Strong, Eventual)"
+        },
+        {
+          "title": "Scalability (Vertical vs Horizontal)"
+        },
+        {
+          "title": "Availability vs Consistency"
+        },
+        {
+          "title": "Latency vs Throughput"
+        },
+        {
+          "title": "Fault Tolerance"
+        },
+        {
+          "title": "High Availability"
+        },
+        {
+          "title": "Load vs Stress vs Spike Testing"
+        }
+      ]
+    },
+    {
+      "topicId": "networking",
+      "title": "Networking Basics",
+      "subtopics": [
+        {
+          "title": "HTTP / HTTPS"
+        },
+        {
+          "title": "TCP vs UDP"
+        },
+        {
+          "title": "DNS Resolution Flow"
+        },
+        {
+          "title": "TLS / SSL Handshake"
+        },
+        {
+          "title": "WebSockets"
+        },
+        {
+          "title": "API Gateway"
+        }
+      ]
+    },
+    {
+      "topicId": "load-balancing",
+      "title": "Load Balancing",
+      "subtopics": [
+        {
+          "title": "L4 vs L7 Load Balancer"
+        },
+        {
+          "title": "Round Robin"
+        },
+        {
+          "title": "Least Connections"
+        },
+        {
+          "title": "IP Hash"
+        },
+        {
+          "title": "Health Checks"
+        },
+        {
+          "title": "Reverse Proxy"
+        }
+      ]
+    },
+    {
+      "topicId": "caching",
+      "title": "Caching",
+      "subtopics": [
+        {
+          "title": "Caching Strategies (Write-through, Write-back, Cache-aside)"
+        },
+        {
+          "title": "Cache Invalidation"
+        },
+        {
+          "title": "Eviction Policies (LRU, LFU, FIFO)"
+        },
+        {
+          "title": "Redis"
+        },
+        {
+          "title": "Memcached"
+        },
+        {
+          "title": "CDN (Content Delivery Network)"
+        },
+        {
+          "title": "Browser Caching"
+        }
+      ]
+    },
+    {
+      "topicId": "databases",
+      "title": "Databases",
+      "subtopics": [
+        {
+          "title": "SQL vs NoSQL"
+        },
+        {
+          "title": "ACID vs BASE"
+        },
+        {
+          "title": "Indexing"
+        },
+        {
+          "title": "Normalization vs Denormalization"
+        },
+        {
+          "title": "Transactions"
+        },
+        {
+          "title": "Query Optimization"
+        }
+      ]
+    },
+    {
+      "topicId": "database-scaling",
+      "title": "Database Scaling",
+      "subtopics": [
+        {
+          "title": "Replication (Master-Slave, Multi-Master)"
+        },
+        {
+          "title": "Sharding"
+        },
+        {
+          "title": "Partitioning"
+        },
+        {
+          "title": "Read Replicas"
+        },
+        {
+          "title": "Data Consistency Challenges"
+        }
+      ]
+    },
+    {
+      "topicId": "communication",
+      "title": "Communication",
+      "subtopics": [
+        {
+          "title": "REST"
+        },
+        {
+          "title": "gRPC"
+        },
+        {
+          "title": "GraphQL"
+        },
+        {
+          "title": "Webhooks"
+        },
+        {
+          "title": "Message Queues (Kafka, RabbitMQ)"
+        },
+        {
+          "title": "Event-Driven Architecture"
+        },
+        {
+          "title": "Pub/Sub Model"
+        }
+      ]
+    },
+    {
+      "topicId": "microservices",
+      "title": "Microservices Architecture",
+      "subtopics": [
+        {
+          "title": "Monolith vs Microservices"
+        },
+        {
+          "title": "Service Discovery"
+        },
+        {
+          "title": "API Gateway Pattern"
+        },
+        {
+          "title": "Circuit Breaker Pattern"
+        },
+        {
+          "title": "Bulkhead Pattern"
+        },
+        {
+          "title": "Saga Pattern"
+        }
+      ]
+    },
+    {
+      "topicId": "storage",
+      "title": "Storage Systems",
+      "subtopics": [
+        {
+          "title": "Blob Storage (S3, GCS)"
+        },
+        {
+          "title": "File Storage Systems"
+        },
+        {
+          "title": "Block Storage"
+        },
+        {
+          "title": "Object Storage"
+        }
+      ]
+    },
+    {
+      "topicId": "search",
+      "title": "Search Systems",
+      "subtopics": [
+        {
+          "title": "Full-Text Search"
+        },
+        {
+          "title": "Inverted Index"
+        },
+        {
+          "title": "Elasticsearch"
+        }
+      ]
+    },
+    {
+      "topicId": "rate-limiting",
+      "title": "Rate Limiting",
+      "subtopics": [
+        {
+          "title": "Token Bucket"
+        },
+        {
+          "title": "Leaky Bucket"
+        },
+        {
+          "title": "Fixed Window Counter"
+        },
+        {
+          "title": "Sliding Window Log"
+        }
+      ]
+    },
+    {
+      "topicId": "security",
+      "title": "Security",
+      "subtopics": [
+        {
+          "title": "Authentication vs Authorization"
+        },
+        {
+          "title": "OAuth 2.0"
+        },
+        {
+          "title": "JWT"
+        },
+        {
+          "title": "Encryption (At Rest / In Transit)"
+        },
+        {
+          "title": "CORS"
+        },
+        {
+          "title": "DDoS Protection"
+        }
+      ]
+    },
+    {
+      "topicId": "observability",
+      "title": "Monitoring & Observability",
+      "subtopics": [
+        {
+          "title": "Logging"
+        },
+        {
+          "title": "Metrics"
+        },
+        {
+          "title": "Tracing"
+        },
+        {
+          "title": "Alerting Systems"
+        },
+        {
+          "title": "Distributed Tracing"
+        }
+      ]
+    },
+    {
+      "topicId": "deployment",
+      "title": "Deployment & Scaling",
+      "subtopics": [
+        {
+          "title": "Horizontal Scaling"
+        },
+        {
+          "title": "Auto Scaling"
+        },
+        {
+          "title": "Blue-Green Deployment"
+        },
+        {
+          "title": "Canary Deployment"
+        },
+        {
+          "title": "Rolling Updates"
+        }
+      ]
+    },
+    {
+      "topicId": "real-world-designs",
+      "title": "System Design Case Studies",
+      "subtopics": [
+        {
+          "title": "URL Shortener"
+        },
+        {
+          "title": "Chat System"
+        },
+        {
+          "title": "Notification System"
+        },
+        {
+          "title": "Rate Limiter Design"
+        },
+        {
+          "title": "News Feed (Instagram / Facebook)"
+        },
+        {
+          "title": "Video Streaming System (YouTube / Netflix)"
+        },
+        {
+          "title": "Ride Sharing System (Uber)"
+        }
+      ]
+    }
+  ]
+}
