@@ -23,7 +23,7 @@ function App() {
   return (
     <div className="flex min-h-screen bg-background text-white">
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      
+
       <main className="flex-1 ml-64 p-10">
         <div className="max-w-6xl mx-auto">
           {renderContent()}

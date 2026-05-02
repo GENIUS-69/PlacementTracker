@@ -49,10 +49,15 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
         ))}
       </nav>
 
-      <div className="p-4 mt-auto">
+      <div className="p-4 mt-auto space-y-4">
         <div className="glass-light rounded-xl p-4">
           <p className="text-xs text-slate-400">Target Date</p>
           <p className="text-sm font-semibold text-white">{fullDate}</p>
+        </div>
+        
+        <div className="text-[10px] text-slate-500 text-center px-2">
+          © {new Date().getFullYear()} PPTracker. <br />
+          Built by GENIUS-69.
         </div>
       </div>
     </div>
