@@ -23,4 +23,28 @@ const getTests = async (req, res) => {
   }
 };
 
-module.exports = { createTest, getTests };
+// @desc    Update a test result
+// @route   PUT /api/tests/:id
+const updateTest = async (req, res) => {
+  try {
+    const test = await Test.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    if (!test) return res.status(404).json({ message: 'Test not found' });
+    res.json(test);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// @desc    Delete a test result
+// @route   DELETE /api/tests/:id
+const deleteTest = async (req, res) => {
+  try {
+    const test = await Test.findByIdAndDelete(req.params.id);
+    if (!test) return res.status(404).json({ message: 'Test not found' });
+    res.json({ message: 'Test deleted' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+module.exports = { createTest, getTests, updateTest, deleteTest };

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Plus, Trophy, AlertTriangle, Calendar } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Plus, Trophy, AlertTriangle, Calendar, Pencil, Trash2 } from 'lucide-react';
 import { TestService } from '../services/api';
 
 const TestPage = () => {
   const [tests, setTests] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [editingId, setEditingId] = useState(null);
   const [formData, setFormData] = useState({
     title: '',
     score: '',
@@ -26,23 +27,56 @@ const TestPage = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleEdit = (test) => {
+    setEditingId(test._id);
+    setFormData({
+      title: test.title,
+      score: test.score.toString(),
+      total: test.total.toString(),
+      topics: test.topics.join(', '),
+      weakAreas: test.weakAreas.join(', ')
+    });
+    setShowModal(true);
+  };
+
+  const handleDelete = async (id) => {
+    if (!window.confirm('Are you sure you want to delete this test result?')) return;
     try {
-      await TestService.createTest({
-        ...formData,
-        score: Number(formData.score),
-        total: Number(formData.total),
-        topics: formData.topics.split(',').map(t => t.trim()),
-        weakAreas: formData.weakAreas.split(',').map(t => t.trim()),
-        date: new Date().toISOString().split('T')[0]
-      });
-      setShowModal(false);
-      setFormData({ title: '', score: '', total: '', topics: '', weakAreas: '' });
+      await TestService.deleteTest(id);
       fetchTests();
     } catch (error) {
       console.error(error);
     }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const data = {
+      ...formData,
+      score: Number(formData.score),
+      total: Number(formData.total),
+      topics: formData.topics.split(',').map(t => t.trim()).filter(t => t),
+      weakAreas: formData.weakAreas.split(',').map(t => t.trim()).filter(t => t),
+      date: new Date().toISOString().split('T')[0]
+    };
+
+    try {
+      if (editingId) {
+        await TestService.updateTest(editingId, data);
+      } else {
+        await TestService.createTest(data);
+      }
+      closeModal();
+      fetchTests();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setEditingId(null);
+    setFormData({ title: '', score: '', total: '', topics: '', weakAreas: '' });
   };
 
   return (
@@ -63,8 +97,23 @@ const TestPage = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {tests.map((test) => (
-          <div key={test._id} className="glass rounded-2xl p-6 border border-white/5 space-y-4">
-            <div className="flex justify-between items-start">
+          <div key={test._id} className="glass rounded-2xl p-6 border border-white/5 space-y-4 relative group">
+            <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+              <button 
+                onClick={() => handleEdit(test)}
+                className="p-2 rounded-lg bg-white/5 text-slate-400 hover:text-primary transition-colors"
+              >
+                <Pencil size={14} />
+              </button>
+              <button 
+                onClick={() => handleDelete(test._id)}
+                className="p-2 rounded-lg bg-white/5 text-slate-400 hover:text-rose-500 transition-colors"
+              >
+                <Trash2 size={14} />
+              </button>
+            </div>
+
+            <div className="flex justify-between items-start pr-16">
               <div>
                 <h3 className="text-lg font-bold text-white">{test.title}</h3>
                 <div className="flex items-center text-xs text-slate-400 mt-1">
@@ -79,7 +128,7 @@ const TestPage = () => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-2 overflow-x-auto pb-1">
+            <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar">
               {test.topics.map((topic, i) => (
                 <span key={i} className="text-[10px] bg-slate-800 text-slate-300 px-2 py-1 rounded-md whitespace-nowrap">
                   {topic}
@@ -106,7 +155,9 @@ const TestPage = () => {
       {showModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="glass w-full max-w-md rounded-3xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-6">Log Test Result</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">
+              {editingId ? 'Edit Test Result' : 'Log Test Result'}
+            </h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-sm text-slate-400 mb-1">Test Title</label>
@@ -160,7 +211,7 @@ const TestPage = () => {
               </div>
               <div className="flex space-x-4 pt-4">
                 <button 
-                  type="button" onClick={() => setShowModal(false)}
+                  type="button" onClick={closeModal}
                   className="flex-1 px-6 py-3 rounded-xl border border-white/10 text-white hover:bg-white/5"
                 >
                   Cancel
@@ -169,7 +220,7 @@ const TestPage = () => {
                   type="submit"
                   className="flex-1 px-6 py-3 rounded-xl bg-primary text-secondary font-bold hover:opacity-90"
                 >
-                  Save Result
+                  {editingId ? 'Update Result' : 'Save Result'}
                 </button>
               </div>
             </form>

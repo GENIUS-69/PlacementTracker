@@ -23,6 +23,8 @@ export const StudyService = {
 export const TestService = {
   createTest: (data) => api.post('/tests', data),
   getTests: () => api.get('/tests'),
+  updateTest: (id, data) => api.put(`/tests/${id}`, data),
+  deleteTest: (id) => api.delete(`/tests/${id}`),
 };
 
 export default api;
