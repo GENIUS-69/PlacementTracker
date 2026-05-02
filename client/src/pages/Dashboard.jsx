@@ -1,8 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { useEffect, useState } from 'react';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 import { Clock, CheckCircle, Target, TrendingUp } from 'lucide-react';
 import useStore from '../store/useStore';
 import { differenceInDays } from 'date-fns';
+
+const COLORS = ['#FBBF24', '#78350F', '#3B82F6'];
+
+const StatCard = ({ title, value, icon: Icon, color }) => (
+  <div className="glass rounded-2xl p-6 flex items-center space-x-4">
+    <div className={`p-4 rounded-xl ${color} bg-opacity-20`}>
+      <Icon className={color.replace('bg-', 'text-')} size={24} />
+    </div>
+    <div>
+      <p className="text-slate-400 text-sm">{title}</p>
+      <p className="text-2xl font-bold text-white">{value}</p>
+    </div>
+  </div>
+);
 
 const Dashboard = () => {
   const { progressStats, fetchProgressStats, targetDate, setTargetDate } = useStore();
@@ -11,7 +25,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     fetchProgressStats();
-  }, []);
+  }, [fetchProgressStats]);
 
   useEffect(() => {
     const days = differenceInDays(new Date(targetDate), new Date());
@@ -22,20 +36,6 @@ const Dashboard = () => {
     name,
     value
   }));
-
-  const COLORS = ['#FBBF24', '#78350F', '#3B82F6'];
-
-  const StatCard = ({ title, value, icon: Icon, color }) => (
-    <div className="glass rounded-2xl p-6 flex items-center space-x-4">
-      <div className={`p-4 rounded-xl ${color} bg-opacity-20`}>
-        <Icon className={color.replace('bg-', 'text-')} size={24} />
-      </div>
-      <div>
-        <p className="text-slate-400 text-sm">{title}</p>
-        <p className="text-2xl font-bold text-white">{value}</p>
-      </div>
-    </div>
-  );
 
   return (
     <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
@@ -80,7 +80,7 @@ const Dashboard = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="glass rounded-2xl p-8 h-[400px]">
-          <h3 className="text-xl font-bold text-white mb-6">Overall Roadmap Completion</h3>
+          <h3 className="text-xl font-bold text-white mb-1">Overall Roadmap Completion</h3>
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
               <Pie
