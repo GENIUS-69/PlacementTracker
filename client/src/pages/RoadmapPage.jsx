@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ChevronDown, ChevronRight, CheckCircle2, Circle, Clock } from 'lucide-react';
 import useStore from '../store/useStore';
 
@@ -8,7 +8,7 @@ const RoadmapPage = ({ type }) => {
 
   useEffect(() => {
     fetchRoadmap(type);
-  }, [type]);
+  }, [type, fetchRoadmap]);
 
   const toggleTopic = (topicId) => {
     setExpandedTopics(prev => 
