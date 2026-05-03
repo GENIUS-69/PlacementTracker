@@ -85,6 +85,20 @@ npm run dev
 
 ---
 
+## ⚡ Quick Start (Windows Only)
+
+For a seamless, one-click experience on Windows, you can use the automated launcher:
+
+1.  **Locate**: `Launch_PPTracker.bat` in the root directory.
+2.  **Run**: Double-click the file.
+3.  **Process**:
+    *   Starts the **MongoDB service** (if not already running).
+    *   Launches both **Frontend and Backend** in a single minimized background window.
+    *   Automatically **opens your browser** to the dashboard once servers are ready.
+4.  **Shutdown**: To stop the application, close the minimized terminal window labeled `PPTracker_Servers` in your taskbar.
+
+---
+
 ## 🗺️ Customizing Roadmaps
 
 If you want to edit or add your own topics to the roadmaps:
